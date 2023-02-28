@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Tilt+Warp&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/*================================
+=========TABLE OF CONTENTS========
+=========1. VARIABLES============
+=========2. TYPOGRAPHY============
+=========3. STYLING===============
+=========4. MEDIA QUERIES=========
+=================================*/
+
+/*================================
+=========1. VARIABLES============
+=================================*/
+
+:root {
+  --ff-general: "Source Sans Pro", sans-serif;
+  --fs-general: 1.8rem;
+}
+
+/*================================
+=========2. TYPOGRAPHY============
+=================================*/
+
+body {
+  font-family: var(--ff-general);
+  font-size: var(--fs-general);
+}
+
+/*================================
+=========3. STYLING============
+=================================*/
+
+/*=============================
+=====CONTAINER POSITIONING=====
+=============================*/
+
+body {
+  background-color: #121212;
+  min-height: 100vh;
+  flex-direction: row;
+  user-select: none;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.calculator-container {
+  background-color: #282828;
+  width: 500px;
+  padding: 2% 2%;
+  position: absolute;
+  top: 15%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.output {
+  background-color: #525252;
+  padding: 1em;
+  margin: 0% 0% 2% 0%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  text-align: right;
+  outline: solid white 2px;
+  color: white;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+/*=============================
+========BUTTON STYLING=========
+=============================*/
+
+.button {
+  font-family: var(--ff-general);
+  font-size: var(--fs-general);
+  border: none;
+  color: white;
+  width: 120px;
+  align-items: center;
+  text-align: center;
+  overflow: auto;
+  padding: 2rem;
+  margin: 1% 1%;
+  background-color: #303030;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 3px;
+}
+
+.button:hover,
+.button:active {
+  background-color: #404040;
+}
+
+.button img {
+  width: 30px;
+}
+
+.numbers {
+  background-color: #505050;
+}
+
+.numbers:hover,
+.numbers:active {
+  background-color: #606060;
+}
+
+.result {
+  background-color: #de3163;
+}
+
+.result:hover,
+.result:active {
+  background-color: rgb(222, 84, 123);
+}
+
+/*==============================
+========IPAD MEDIA QUERY========
+==============================*/
+
+@media only screen and (min-width: 500px) and (max-width: 900px) {
+  .calculator-container {
+    position: absolute;
+    top: 25%;
+  }
+}
+
+/*==============================
+=======PHONE MEDIA QUERY========
+==============================*/
+
+@media only screen and (max-width: 500px) {
+  .calculator-container {
+    width: 350px;
+    background-color: #121212;
+    box-shadow: none;
+  }
+
+  .output {
+    margin: 0% 0% 10% 0%;
+  }
+}
